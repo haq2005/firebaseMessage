@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/firebaseMessage/static/css/main.073c9b0a.css",
-    "main.js": "/firebaseMessage/static/js/main.21c34a1a.js",
-    "static/js/787.904d13c2.chunk.js": "/firebaseMessage/static/js/787.904d13c2.chunk.js",
+    "main.js": "/firebaseMessage/static/js/main.69394ac1.js",
+    "static/js/787.349b0e60.chunk.js": "/firebaseMessage/static/js/787.349b0e60.chunk.js",
     "index.html": "/firebaseMessage/index.html",
     "main.073c9b0a.css.map": "/firebaseMessage/static/css/main.073c9b0a.css.map",
-    "main.21c34a1a.js.map": "/firebaseMessage/static/js/main.21c34a1a.js.map",
-    "787.904d13c2.chunk.js.map": "/firebaseMessage/static/js/787.904d13c2.chunk.js.map"
+    "main.69394ac1.js.map": "/firebaseMessage/static/js/main.69394ac1.js.map",
+    "787.349b0e60.chunk.js.map": "/firebaseMessage/static/js/787.349b0e60.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.21c34a1a.js"
+    "static/js/main.69394ac1.js"
   ]
 }

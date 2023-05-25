@@ -1,21 +1,32 @@
+importScripts("https://www.gstatic.com/firebasejs/9.17.1/firebase-app-compat.js")
+importScripts("https://www.gstatic.com/firebasejs/9.17.1/firebase-messaging-compat.js")
+importScripts("https://www.gstatic.com/firebasejs/9.17.1/firebase-auth-compat.js")
+let firebaseConfig = {
+    apiKey: "AIzaSyDPm5gCjonRSybTOwD7wYGG3aPju6ey1zE",
+    authDomain: "lateform-117f2.firebaseapp.com",
+    projectId: "lateform-117f2",
+    storageBucket: "lateform-117f2.appspot.com",
+    messagingSenderId: "393196830062",
+    appId: "1:393196830062:web:930e73b66db3a318a4557f",
+    measurementId: "G-HPENMT7H7G"
+}
+const app =firebase.initializeApp(firebaseConfig);
+const messaging = firebase.messaging(app);
 
- 
+messaging.onBackgroundMessage(payload =>{
+    console.log("you received a message when you haven't the app active");
+    console.log(payload)
 
-importScripts('https://www.gstatic.com/firebasejs/3.5.0/firebase-app.js');
-importScripts('https://www.gstatic.com/firebasejs/3.5.0/firebase-messaging.js');
-
-if ('serviceWorker' in navigator) {
-    console.log('working..')
-    navigator.serviceWorker.register('https://haq2005.github.io/firebaseMessage/firebase-messaging-sw.js')
-      .then(function(registration) {
-        console.log('Registration successful, scope is:', registration.scope);
-      }).catch(function(err) {
-        console.log('Service worker registration failed, error:', err);
-      });
+    const notificationTitle = payload.notification.title;
+    const notificationOptions = {
+        body: payload.notification.body,
+        icon: "/logo192.png"
     }
 
-firebase.initializeApp({
-    messagingSenderId: "393196830062",
-  })
+  
 
-const initMessaging = firebase.messaging()
+    return self.registration.showNotification(
+        notificationTitle,
+        notificationOptions
+    )
+})
